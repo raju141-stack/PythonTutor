@@ -1,0 +1,86 @@
+Running the Python Learning Hub Locally
+Here are the step-by-step instructions to run the app on your local machine.
+
+Prerequisites
+Make sure you have the following installed:
+Python 3.10 or higher — check by running python --version in your terminal
+pip — Python's package installer (comes bundled with Python)
+
+Step 1 — Create Your Project Folder
+Create a new folder on your computer and place all four files inside it:
+python-learning-hub/
+├── app.py
+├── calculator.py
+├── quiz.py
+└── requirements.txt
+
+Step 2 — Open a Terminal
+Windows: Press Win + R, type cmd, and hit Enter. Then navigate to your folder:
+Command: cd path\to\python-learning-hub
+
+Step 3 — Create a Virtual Environment (Recommended)
+A virtual environment keeps your project dependencies isolated from other Python projects.
+Command: python -m venv venv
+
+Step 3.1: Then activate it:
+Command: venv\Scripts\activate
+
+Step 4 — Install Dependencies. Install Streamlit using the requirements.txt file:
+This will download and install Streamlit and all its dependencies. It may take a minute or two.
+Command: pip install -r requirements.txt
+or use 
+Command: pip install Streamlit
+
+Step 5 — Run the App
+Command: streamlit run app.py
+Streamlit will start the local server and display output like this:You can now view your Streamlit app in your browser.
+Local URL:  http://localhost:8501
+Network URL: http://192.168.x.x:8501
+
+Step 6 — Open in Your Browser: http://localhost:8501
+Your Python Learning Hub app will be fully running locally.
+
+Step 7: Stopping the App. To stop the server, go back to your terminal and press:
+Command: Ctrl + C
+
+Step 8: To deactivate the virtual environment when you are done:
+Command: deactivate
+
+Quick Reference Summary:
+Activate virtual environment:- venv\Scripts\activate
+Install dependencies:- pip install -r requirements.txt
+Run the app:- streamlit run app.py
+Open in browser:- http://localhost:8501
+Stop the server:- Ctrl + C
+
+
+You said: I am getting error while install dependencies
+In the meantime, here are the most common errors and their fixes:
+
+Fix 1 — Streamlit version conflict
+Try installing without a pinned version:
+Command: pip install streamlit
+
+Fix 2 — pip is outdated
+Upgrade pip first, then retry:
+Command: python -m pip install --upgrade pip
+Command: pip install streamlit
+
+Fix 3 — Wrong Python/pip version (common on Mac)
+Try using pip3 instead of pip:
+Command: pip3 install streamlit
+Or explicitly use your Python version:
+Command: python3 -m pip install streamlit
+
+Fix 4 — Virtual environment not activated
+Make sure you see (venv) in your terminal before installing. If not, activate it first:
+
+Windows: venv\Scripts\activate
+Mac/Linux: source venv/bin/activate
+
+Then retry:
+Command: pip install -r requirements.txt
+
+Fix 5 — Python not added to PATH (Windows only)
+If you get 'pip' is not recognized, run this instead:
+Command: python -m pip install streamlit
